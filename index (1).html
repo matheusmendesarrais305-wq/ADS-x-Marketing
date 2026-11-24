@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ADS-X Marketing: tráfego pago, social media, SEO, criação de sites, landing pages e videomaker. Transformando cliques em clientes.">
+  <meta name="theme-color" content="#050b18">
+  <title>ADS-X Marketing | Transformando cliques em clientes</title>
+  <link rel="icon" href="logo.png">
+  <style>
+    :root{--blue:#1688ff;--cyan:#56c7ff;--bg:#050b18;--panel:#0b1628;--muted:#b8c6d8}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:#fff;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .hero{min-height:100svh;position:relative;display:grid;place-items:center;padding:92px 22px 70px;overflow:hidden;background:
+      linear-gradient(115deg,rgba(3,8,18,.96),rgba(3,8,18,.78) 58%,rgba(3,8,18,.92)),
+      radial-gradient(ellipse at 50% 35%,rgba(0,78,190,.18),transparent 58%),linear-gradient(135deg,#030711,#050b18 60%,#020611)}
+    .hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:#087cff;filter:blur(150px);opacity:.18;right:-180px;top:-140px}
+    .nav{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;max-width:1160px;margin:auto;padding:22px}
+    .brand{font-weight:900;letter-spacing:.04em;font-size:1.15rem}.brand span{color:var(--blue)}
+    .nav a.contact{border:1px solid rgba(86,199,255,.5);border-radius:999px;padding:10px 17px;font-size:.9rem;transition:.2s}
+    .nav a.contact:hover{background:rgba(22,136,255,.15)}
+    .hero-inner{position:relative;z-index:1;max-width:900px;text-align:center}
+    .logo{display:block;width:min(760px,92vw);height:auto;border-radius:8px;margin:0 auto 28px;filter:drop-shadow(0 12px 32px rgba(0,95,255,.18))}
+    .eyebrow{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:16px}
+    h1{font-size:clamp(2.4rem,7vw,5.3rem);line-height:1.02;letter-spacing:-.04em;margin-bottom:22px}
+    h1 span,.accent{color:var(--blue)}
+    .intro{font-size:clamp(1rem,2vw,1.18rem);color:var(--muted);max-width:730px;margin:0 auto 30px}
+    .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:10px;font-weight:800;transition:.22s;border:1px solid transparent}
+    .primary{background:linear-gradient(135deg,#087cff,#005bd5);box-shadow:0 8px 30px rgba(0,112,255,.25)}
+    .primary:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(0,112,255,.4)}
+    .outline{border-color:rgba(86,199,255,.45);background:rgba(255,255,255,.04)}
+    .outline:hover{background:rgba(22,136,255,.12);transform:translateY(-2px)}
+    section{padding:88px 22px}
+    .container{max-width:1120px;margin:auto}
+    .section-head{text-align:center;max-width:750px;margin:0 auto 42px}
+    .section-head h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;margin-bottom:14px}
+    .section-head p{color:var(--muted)}
+    .services{background:linear-gradient(180,#071120,#081426)}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .card{display:flex;flex-direction:column;background:linear-gradient(160deg,#101f34,#0a1424);border:1px solid rgba(22,136,255,.18);border-radius:16px;padding:26px 22px;transition:.25s}
+    .card:hover{transform:translateY(-6px);border-color:rgba(22,136,255,.65);box-shadow:0 15px 36px rgba(0,60,140,.18)}
+    .icon{font-size:2rem;margin-bottom:14px}
+    .card h3{font-size:1.15rem;margin-bottom:9px}
+    .card p{font-size:.94rem;color:var(--muted);flex-grow:1}
+    .price-box{margin-top:20px;padding-top:16px;border-top:1px solid rgba(86,199,255,.15);display:flex;flex-direction:column;gap:4px}
+    .price-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .price-value{font-size:1.35rem;font-weight:900;color:var(--cyan)}
+    .price-value small{font-size:.85rem;font-weight:600;color:#dbe7f5}
+    .card-link{display:inline-block;margin-top:12px;font-size:.88rem;font-weight:700;color:var(--blue);transition:.2s}
+    .card:hover .card-link{color:var(--cyan)}
+    .why{background:var(--bg)}
+    .why-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+    .why-box{border:1px solid rgba(22,136,255,.22);border-radius:18px;padding:30px;background:radial-gradient(circle at top right,rgba(22,136,255,.13),transparent 55%),var(--panel)}
+    .why-box h2{font-size:2rem;line-height:1.2;margin-bottom:15px}
+    .why-box p{color:var(--muted)}
+    .points{list-style:none;display:grid;gap:13px}
+    .points li{display:flex;gap:12px;color:#dbe7f5}
+    .check{color:var(--cyan);font-weight:900}
+    .cta{text-align:center;background:radial-gradient(ellipse at center,rgba(0,100,255,.18),transparent 65%),#07101e}
+    .cta h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;margin-bottom:16px}
+    .cta p{color:var(--muted);max-width:680px;margin:0 auto 26px}
+    footer{padding:28px 20px;text-align:center;color:#8fa2ba;background:#030711;border-top:1px solid rgba(255,255,255,.05);font-size:.9rem}
+    footer strong{color:var(--cyan)}
+    .float-wa{position:fixed;right:20px;bottom:20px;z-index:10;background:#1688ff;color:white;padding:13px 17px;border-radius:999px;font-weight:800;box-shadow:0 8px 25px rgba(0,80,255,.3)}
+    @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.why-layout{grid-template-columns:1fr}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}.hero{padding-top:100px}.nav{padding:18px}.nav a.contact{font-size:.8rem;padding:8px 12px}.logo{width:min(760px,92vw)}section{padding:65px 18px}.float-wa{right:12px;bottom:12px;padding:12px 14px}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="#inicio">ADS-<span>X</span> MARKETING</a>
+      <a class="contact" href="https://wa.me/5562994331445" target="_blank" rel="noopener">Fale conosco ↗</a>
+    </nav>
+    <div class="hero-inner">
+      <img src="logo.png" alt="Logo ADS-X Marketing" class="logo">
+      <p class="eyebrow">Marketing digital • Estratégia • Crescimento</p>
+      <h1>🚀 SUA MARCA<br>MERECE <span>CRESCER!</span></h1>
+      <p class="intro">Se você quer mais presença digital, mais autoridade e mais oportunidades para o seu negócio, a ADS-X Marketing pode te ajudar. Criamos estratégias para fortalecer sua marca, aproximá-la do público certo e abrir caminhos para novas oportunidades.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Quero%20conhecer%20as%20solu%C3%A7%C3%B5es%20da%20ADS-X%20Marketing." target="_blank" rel="noopener">📲 Quero falar com a ADS-X</a>
+        <a class="btn outline" href="#servicos">Conheça nossos serviços ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Soluções para o seu negócio</p>
+        <h2>Estratégia para sua marca <span class="accent">ir mais longe</span></h2>
+        <p>Trabalhamos com empresas, comércios e profissionais que desejam se destacar no mercado e construir uma presença digital consistente.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🎯</div>
+          <h3>Gestão de Tráfego Pago</h3>
+          <p>Campanhas planejadas para ampliar seu alcance, atrair pessoas interessadas e apresentar seus produtos ou serviços ao público certo.</p>
+          <div class="price-box">
+            <span class="price-label">Investimento inicial</span>
+            <span class="price-value">A partir de R$ 540,00<small>/mês</small></span>
+            <a class="card-link" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20Gest%C3%A3o%20de%20Tr%C3%A1fego%20Pago." target="_blank" rel="noopener">Solicitar proposta →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="icon">📱</div>
+          <h3>Gestão de Redes Sociais (Social Media)</h3>
+          <p>Conteúdo e presença nas redes sociais para comunicar sua marca, fortalecer relacionamento e manter seu negócio em evidência.</p>
+          <div class="price-box">
+            <span class="price-label">Investimento inicial</span>
+            <span class="price-value">A partir de R$ 490,00<small>/mês</small></span>
+            <a class="card-link" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20Gest%C3%A3o%20de%20Redes%20Sociais." target="_blank" rel="noopener">Solicitar proposta →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔎</div>
+          <h3>SEO</h3>
+          <p>Otimização do seu conteúdo e site para facilitar que clientes encontrem sua empresa nos mecanismos de busca.</p>
+          <div class="price-box">
+            <span class="price-label">Investimento inicial</span>
+            <span class="price-value">A partir de R$ 700,00 <small>(pagamento único)</small></span>
+            <a class="card-link" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20SEO." target="_blank" rel="noopener">Solicitar proposta →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="icon">💻</div>
+          <h3>Criação de Site</h3>
+          <p>Sites modernos, responsivos e organizados para apresentar seu negócio, seus serviços e facilitar o contato com clientes.</p>
+          <div class="price-box">
+            <span class="price-label">Investimento inicial</span>
+            <span class="price-value">A partir de R$ 420,00</span>
+            <a class="card-link" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20Cria%C3%A7%C3%A3o%20de%20Site." target="_blank" rel="noopener">Solicitar proposta →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="icon">🚀</div>
+          <h3>Criação de Landing Page</h3>
+          <p>Páginas de alta conversão focadas em ofertas específicas, captura de leads e campanhas de tráfego pago.</p>
+          <div class="price-box">
+            <span class="price-label">Investimento inicial</span>
+            <span class="price-value">A partir de R$ 340,00</span>
+            <a class="card-link" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20Cria%C3%A7%C3%A3o%20de%20Landing%20Page." target="_blank" rel="noopener">Solicitar proposta →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎬</div>
+          <h3>Videomaker (gravação e edição)</h3>
+          <p>Captação e edição profissional de vídeos estratégicos para anúncios, redes sociais e apresentação da sua marca.</p>
+          <div class="price-box">
+            <span class="price-label">Investimento inicial</span>
+            <span class="price-value">A partir de R$ 450,00</span>
+            <a class="card-link" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Videomaker." target="_blank" rel="noopener">Solicitar proposta →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="container why-layout">
+      <div class="why-box">
+        <p class="eyebrow">Sua presença digital começa aqui</p>
+        <h2>Mais do que aparecer.<br><span class="accent">Conecte-se e cresça.</span></h2>
+        <p>Uma presença digital bem construída ajuda as pessoas a conhecerem sua empresa, entenderem o valor do que você oferece e encontrarem um caminho simples para entrar em contato.</p>
+      </div>
+      <ul class="points">
+        <li><span class="check">✓</span> Estratégias pensadas para os objetivos da sua marca</li>
+        <li><span class="check">✓</span> Comunicação profissional e presença digital consistente</li>
+        <li><span class="check">✓</span> Soluções que atendem diferentes negócios e profissionais</li>
+        <li><span class="check">✓</span> Um caminho mais simples para clientes encontrarem você</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta" id="contato">
+    <div class="container">
+      <p class="eyebrow">Vamos dar o próximo passo?</p>
+      <h2>💡 Sua marca merece crescer.</h2>
+      <p>A estratégia começa aqui. Fale com a ADS-X Marketing e conheça as soluções que podem ajudar seu negócio a se destacar no digital.</p>
+      <a class="btn primary" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20ADS-X%20Marketing%20e%20quero%20conhecer%20os%20servi%C3%A7os." target="_blank" rel="noopener">🚀 Fale com a ADS-X Marketing</a>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>ADS-X Marketing</strong></p>
+    <p>Transformando cliques em clientes.</p>
+    <p style="margin-top:12px">© <span id="year"></span> ADS-X Marketing. Todos os direitos reservados.</p>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/5562994331445?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20ADS-X%20Marketing." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">WhatsApp ↗</a>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
